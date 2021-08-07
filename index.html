@@ -9,41 +9,41 @@
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-  <main>
-    <section class="top-side-header">
-      <h1 class="main-header">Rock, Paper, Scissors</h1>
-      <h2 class="second-main-header">Choose your game!</h2>
-    </section>
-    <aside class="player-1-section" id="playerSection">
-      <button class="change-game button hidden" id="changeGameBtn">Change Game?</button>
-    </aside>
-      <p>Player</p>
-      <p>Wins :</p>
-    <section class="middle-section" id=middleSection>
-      <button class="game-selection-btn" id="classicBtn">
-          <h3>🪨 CLASSIC ✂️</h3>
-          <p>
-            rock > scissors<br>
-            paper > rock<br>
-            scissors > paper
-          </p>
-        </button><br>
-        <button class="game-selection-btn" id="difficultBtn">
-          <h3>🦎 DIFFICULT 👽</h3>
-          <p>
-            rock > scissors & lizard<br>
-            paper > rock & alien<br>
-            scissors > paper & lizard<br>
-            lizard > paper & alien<br>
-            alien > scissors & rock
-          </p>
-        </button>
-    </section>
-    <aside class="computer-section" id=computerSection>
-      <p>Computer</p>
-      <p>Wins :</p>
-    </aside>
-  </main>
+    <main>
+      <aside class="player-1-section" id="playerSection">
+        <p>Player</p>
+        <p>Wins :</p>
+        <button class="change-game-button hidden" id="changeGameBtn">Change Game?</button>
+      </aside>
+      <section class="middle-section" id=middleSection>
+        <h1 class="main-header">Rock, Paper, Scissors</h1>
+        <h2 class="second-main-header">Choose your game!</h2>
+        <div class="main-button-container">
+          <button class="classic-selection-btn hidden" id="classicBtn">
+            <h3>🪨 CLASSIC ✂️</h3>
+            <p>
+              rock > scissors<br>
+              paper > rock<br>
+              scissors > paper
+            </p>
+          </button><br>
+          <button class="difficult-selection-btn hidden" id="difficultBtn">
+            <h3>🦎 DIFFICULT 👽</h3>
+            <p>
+              rock > scissors & lizard<br>
+              paper > rock & alien<br>
+              scissors > paper & lizard<br>
+              lizard > paper & alien<br>
+              alien > scissors & rock
+            </p>
+          </button>
+        </div>
+      </section>
+      <aside class="computer-section" id=computerSection>
+        <p>Computer</p>
+        <p>Wins :</p>
+      </aside>
+    </main>
   </body>
 <script src="./game.js"></script>
 <script src="./player.js"></script>
