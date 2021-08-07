@@ -83,6 +83,13 @@ button {
 .change-game-button {
   background-color: rgba(0,0,0,.2);
 }
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
 /* .classic-selection-btn {
 
 } */
