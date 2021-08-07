@@ -31,6 +31,25 @@ section {
   padding: 1em;
 }
 
+h1 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 75px;
+}
+
+h2 {
+  justify: center;
+  margin: 0.5em;
+}
+
+h3 {
+  margin: 1em;
+}
+
+p {
+  line-height: 200%
+}
+
 /* .classic-selection-btn {
 
 } */
