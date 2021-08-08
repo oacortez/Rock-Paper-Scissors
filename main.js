@@ -9,3 +9,8 @@ var lizardImg = document.querySelector('#lizard');
 var alienImg = document.querySelector('#alien');
 var showDifficultFighters = document.querySelector('#showDifficultFighters');
 var header = document.querySelector('h2');
+
+
+////// ⬇️ Event Listeners
+classicBtn.addEventListener('click', viewClassic);
+difficultBtn.addEventListener('click', viewDifficult);
