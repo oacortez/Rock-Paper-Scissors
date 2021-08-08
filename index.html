@@ -19,7 +19,7 @@
         <h1 class="main-header">Rock, Paper, Scissors</h1>
         <h2 class="second-main-header">Choose your game!</h2>
         <div class="main-button-container">
-          <button class="classic-selection-btn hidden" id="classicBtn">
+          <button class="classic-selection-btn" id="classicBtn">
             <h3>🪨 CLASSIC ✂️</h3>
             <p>
               rock > scissors<br>
@@ -27,7 +27,7 @@
               scissors > paper
             </p>
           </button><br>
-          <button class="difficult-selection-btn hidden" id="difficultBtn">
+          <button class="difficult-selection-btn" id="difficultBtn">
             <h3>🦎 DIFFICULT 👽</h3>
             <p>
               rock > scissors & lizard<br>
@@ -39,28 +39,28 @@
           </button>
         </div>
       </section>
-      <section class= "view-your-fighter hidden" id= "chooseFighter">
-        <h2>Choose your fighter!</h2>
+      <!-- <section class= "view-your-fighter hidden" id= "chooseFighter"> -->
+        <!-- <h2 class="choose-fighter-text" id="chooseFigherText">Choose your fighter!</h2> -->
         <section class="view-classic-fighters hidden" id="classicFighters">
-          <input type="radio" id="rock" name="fighter">
-          <label class="fighter" for="rock"><img src="./assets/happy-rocks.png" alt="Rock">Rock</label>
-          <input type="radio" id="paper" name="fighter">
-          <label class="fighter" for="paper"><img src="./assets/happy-paper.png" alt="Paper">Paper</label>
-          <input type="radio" id="scissors" name="fighter">
-          <label class="fighter" for="scissors"><img src="./assets/happy-scissors.png" alt="Scissors">Scissors</label>
+          <input type="image" id="rock" name="fighter" src="./assets/happy-rocks.png" alt="Rock">
+          <!-- <label class="fighter" for="rock"><img src="./assets/happy-rocks.png" alt="Rock">Rock</label> -->
+          <input type="image" id="paper" name="fighter" src="./assets/happy-paper.png" alt="Paper">
+          <!-- <label class="fighter" for="paper"><img src="./assets/happy-paper.png" alt="Paper">Paper</label> -->
+          <input type="image" id="scissors" name="fighter" src="./assets/happy-scissors.png" alt="Scissors">
+          <!-- <label class="fighter" for="scissors"><img src="./assets/happy-scissors.png" alt="Scissors">Scissors</label> -->
         </section>
-        <section class= "view-difficult-fighters hidden">
-          <input type="radio" name="fighter" id="lizard">
-          <label class="fighter" for="lizard"><img src="./assets/lizard.png" alt="cartoon lizard"></label>
-          <input type="radio" name="fighter" id="alien">
-          <label class="fighter" for="alien"><img src="./assets/ufo.png" alt="cartoon alien"></label>
-          <input type="radio" id="rock" name="fighter">
-          <label class="fighter" for="rock"><img src="./assets/happy-rocks.png" alt="Rock">Rock</label>
-          <input type="radio" id="paper" name="fighter">
-          <label class="fighter" for="paper"><img src="./assets/happy-paper.png" alt="Paper">Paper</label>
-          <input type="radio" id="scissors" name="fighter">
-          <label class="fighter" for="scissors"><img src="./assets/happy-scissors.png" alt="Scissors">Scissors</label>
-        </section>
+      <!-- </section> -->
+      <section class= "view-difficult-fighters hidden" id="showDifficultFighters">
+        <input type="image" name="fighter" id="lizard" src="./assets/lizard.png" alt="cartoon lizard">
+        <!-- <label class="fighter" for="lizard"><img src="./assets/lizard.png" alt="cartoon lizard"></label> -->
+        <input type="image" name="fighter" id="alien" src="./assets/ufo.png" alt="cartoon alien">
+        <!-- <label class="fighter" for="alien"><img src="./assets/ufo.png" alt="cartoon alien"></label> -->
+        <input type="image" id="rock" name="fighter" src="./assets/happy-rocks.png" alt="Rock">
+        <!-- <label class="fighter" for="rock"><img src="./assets/happy-rocks.png" alt="Rock">Rock</label> -->
+        <input type="image" id="paper" name="fighter" src="./assets/happy-paper.png" alt="Paper">
+        <!-- <label class="fighter" for="paper"><img src="./assets/happy-paper.png" alt="Paper">Paper</label> -->
+        <input type="image" id="scissors" name="fighter" src="./assets/happy-scissors.png" alt="Scissors">
+        <!-- <label class="fighter" for="scissors"><img src="./assets/happy-scissors.png" alt="Scissors">Scissors</label> -->
       </section>
       <aside class="computer-section" id=computerSection>
         <p>Computer</p>
