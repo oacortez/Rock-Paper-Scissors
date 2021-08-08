@@ -14,3 +14,29 @@ var header = document.querySelector('h2');
 ////// ⬇️ Event Listeners
 classicBtn.addEventListener('click', viewClassic);
 difficultBtn.addEventListener('click', viewDifficult);
+
+
+///// ⬇️ functions
+
+function viewClassic() {
+  event.preventDefault();
+  hide(classicBtn);
+  hide(difficultBtn);
+  show(viewYourClassic);
+  header.innerText = 'Choose your fighter!';
+}
+
+function viewDifficult() {
+  hide(classicBtn);
+  hide(difficultBtn);
+  show(showDifficultFighters)
+  header.innerText = 'Choose your fighter!';
+}
+
+function hide(element) {
+  element.classList.add("hidden");
+}
+
+function show(element) {
+  element.classList.remove("hidden");
+}
