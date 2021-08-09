@@ -92,19 +92,16 @@ img {
 }
 
 .view-classic-fighters {
-   display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  /* size: 10px; */
+  width: 100px;
+  height: 100px;
+}
 
-  /* background-size: 100px; */
-  /* display: block;
-  width: 100%;
-  height: auto; */
-  /* max-width: 100%; */
-  /* object-fit: contain; */
-  /* height: 100px; */
+.classic-img {
+height: 100px;
 }
 
 .hidden {
