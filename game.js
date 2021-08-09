@@ -1,17 +1,21 @@
 class Game {
-  constructor() {
+  constructor(gameType) {
+    this.humanPlayer = new Player('Human', '👨🏻‍💻');
+    this.ComputerPlayer = new Player('Computer', '👾');
+    this.gameType = gameType;
 
   }
-  chooseGameType() {
 
+  chooseFigther() {
+    
   }
-  chooseFighters() {
+  chooseGame() {
 
   }
   checkForWinner() {
 
   }
   resetGame() {
-    
+
   }
 }
