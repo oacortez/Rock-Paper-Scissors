@@ -3,7 +3,7 @@ class Player {
     this.name = name;
     this.emoji = emoji;
     this.wins = 0;
-    this.choice;
+    this.choice = undefined;
   }
   saveWinsToStorage() {
 
@@ -12,6 +12,6 @@ class Player {
 
   }
   takeTurn() {
-    
+
   }
 }
