@@ -49,11 +49,4 @@ class Game {
     render(this);
     setTimeout(viewClassic, 3000);
   }
-  resetGame() {
-    this.humanPlayer.fighter = undefined;
-    this.computerPlayer.fighter = undefined;
-    this.matchup = {humanPlayer: null, computerPlayer: null};
-    this.winner = undefined;
-    startNewGame();
-  }
 }
