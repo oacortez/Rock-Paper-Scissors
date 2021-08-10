@@ -5,6 +5,7 @@
 var classicBtn = document.querySelector('#classicBtn');
 var difficultBtn = document.querySelector('#difficultBtn');
 var changeGameBtn = document.querySelector('#changeGameBtn');
+var resetBtn = document.querySelector('#resetBtn');
 var viewYourClassic = document.querySelector('#classicFighters');
 var rockImg = document.querySelector('#rock');
 var paperImg = document.querySelector('#paper');
@@ -28,6 +29,7 @@ classicBtn.addEventListener('click', viewClassic);
 difficultBtn.addEventListener('click', viewDifficult);
 viewYourClassic.addEventListener('click', classicFighters);
 changeGameBtn.addEventListener('click', changeGame);
+resetBtn.addEventListener('click', resetGame);
 window.addEventListener('load', updatedWins);
 
 
@@ -82,6 +84,11 @@ function changeGame() {
   show(difficultBtn);
   hide(changeGameBtn);
   hide(showDifficultFighters);
+}
+
+function resetGame() {
+  localStorage.clear();
+  location.reload();
 }
 
 function viewDifficult() {
