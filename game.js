@@ -20,20 +20,13 @@ class Game {
       }
     }
 
+
   chooseFighter() {
    var humanFighter = this.humanPlayer.takeTurn(this);
    var computerFighter = this.computerPlayer.takeTurn(this);
    this.checkForWinner(humanFighter, computerFighter);
  }
 
-  // chooseGame() {
-  //   if(this.gameType === 'classic') {
-  //     this.fighters = ['rock', 'paper', 'scissors'];
-  //   }
-  //   if(this.gameType === 'difficult-selection-btn') {
-  //     this.fighters = ['rock', 'paper', 'scissors', 'alien', 'lizard'];
-  //   }
-  // }
 
   checkForWinner(human, computer) {
     if (this.winConditions[human].includes(computer)) {
