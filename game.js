@@ -1,7 +1,7 @@
 class Game {
   constructor(gameType) {
     this.humanPlayer = new Player('Human', '👨🏻‍💻');
-    this.ComputerPlayer = new Player('Computer', '👾');
+    this.computerPlayer = new Player('Computer', '👾');
     this.gameType = gameType;
     this.fighters = {
       rock: "./assets/happy-rocks.png",
@@ -12,9 +12,11 @@ class Game {
     };
     this.winner = undefined;
     this.winConditions = {
-     scissors: 'paper',
-     paper: 'rock',
-     rock: 'scissors'
+     scissors: ['paper', 'lizard'],
+     paper: ['rock', 'alien'],
+     rock: ['scissors', 'lizard'],
+     lizard: ['paper', 'alien'],
+     alien: ['scissors', 'rock']
       }
     }
 
@@ -24,33 +26,34 @@ class Game {
    this.checkForWinner(humanFighter, computerFighter);
  }
 
-  chooseGame() {
-    if(this.gameType === 'classic') {
-      this.fighters = ['rock', 'paper', 'scissors'];
-    }
-    if(this.gameType === 'difficult-selection-btn') {
-      this.fighters = ['rock', 'paper', 'scissors', 'alien', 'lizard'];
-    }
-  }
+  // chooseGame() {
+  //   if(this.gameType === 'classic') {
+  //     this.fighters = ['rock', 'paper', 'scissors'];
+  //   }
+  //   if(this.gameType === 'difficult-selection-btn') {
+  //     this.fighters = ['rock', 'paper', 'scissors', 'alien', 'lizard'];
+  //   }
+  // }
+
   checkForWinner(human, computer) {
     if (this.winConditions[human].includes(computer)) {
       this.winner = this.humanPlayer.name;
       this.humanPlayer.wins++;
+      this.humanPlayer.saveWinsToStorage();
     } else if (this.winConditions[computer].includes(human)) {
       this.winner = this.computerPlayer.name;
       this.computerPlayer.wins++
+      this.computerPlayer.saveWinsToStorage();
     } else {
       this.winner = null;
     }
     this.humanPlayer.saveWinsToStorage();
     this.computerPlayer.saveWinsToStorage();
     render(this);
-  }
-  resetGame() {
-    this.humanPlayer.fighter = undefined;
-    this.computerPlayer.fighter = undefined;
-    this.matchup = {humanPlayer: null, computerPlayer: null};
-    this.winner = undefined;
-    startNewGame();
+    if(this.gameType === 'classic') {
+      setTimeout(viewClassic, 3000)
+    } else {
+      setTimeout(viewDifficult, 3000)
+    }
   }
 }
