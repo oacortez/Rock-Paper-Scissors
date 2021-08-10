@@ -1,7 +1,7 @@
 class Game {
   constructor(gameType) {
     this.humanPlayer = new Player('Human', '👨🏻‍💻');
-    this.ComputerPlayer = new Player('Computer', '👾');
+    this.computerPlayer = new Player('Computer', '👾');
     this.gameType = gameType;
     this.fighters = {
       rock: "./assets/happy-rocks.png",
@@ -36,15 +36,18 @@ class Game {
     if (this.winConditions[human].includes(computer)) {
       this.winner = this.humanPlayer.name;
       this.humanPlayer.wins++;
+      this.humanPlayer.saveWinsToStorage();
     } else if (this.winConditions[computer].includes(human)) {
       this.winner = this.computerPlayer.name;
       this.computerPlayer.wins++
+      this.computerPlayer.saveWinsToStorage();
     } else {
       this.winner = null;
     }
     this.humanPlayer.saveWinsToStorage();
     this.computerPlayer.saveWinsToStorage();
     render(this);
+    setTimeout(viewClassic, 3000);
   }
   resetGame() {
     this.humanPlayer.fighter = undefined;
