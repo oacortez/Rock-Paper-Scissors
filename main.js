@@ -27,6 +27,7 @@ var newGame;
 ////// ⬇️ Event Listeners
 classicBtn.addEventListener('click', viewClassic);
 difficultBtn.addEventListener('click', viewDifficult);
+showDifficultFighters.addEventListener('click', difficultFighters);
 viewYourClassic.addEventListener('click', classicFighters);
 changeGameBtn.addEventListener('click', changeGame);
 resetBtn.addEventListener('click', resetGame);
@@ -87,15 +88,23 @@ function changeGame() {
 }
 
 function resetGame() {
-  localStorage.clear();
-  location.reload();
+  var verifyChoice = window.confirm('Are you sure?')
+  if (verifyChoice === true) {
+    localStorage.clear();
+    location.reload();
+  }
 }
 
 function viewDifficult() {
+  newGame = new Game('difficult');
+  newGame.humanPlayer.retrieveWinsFromStorage();
+  newGame.computerPlayer.retrieveWinsFromStorage();
   hide(classicBtn);
   hide(difficultBtn);
+  hide(displayWinner);
+  show(changeGameBtn);
   show(showDifficultFighters);
-  show(changeGameBtn)
+  updatedWins();
   header.innerText = 'Choose your fighter!';
 }
 
@@ -116,6 +125,21 @@ function classicFighters(e) {
   computerChoice(3);
   computerFighterImg.src = newGame.fighters[newGame.computerPlayer.choice];
   hide(viewYourClassic);
+  show(displayWinner);
+  newGame.checkForWinner(event.target.id, newGame.computerPlayer.choice);
+}
+
+function difficultFighters(e) {
+  if(event.target.id === 'showDifficultFighters') {
+    console.log("bug");
+    return;
+  }
+  console.log("more bugs");
+  playerFighterImg.src = newGame.fighters[event.target.id]
+  newGame.humanPlayer.choice = event.target.id;
+  computerChoice(5);
+  computerFighterImg.src = newGame.fighters[newGame.computerPlayer.choice];
+  hide(showDifficultFighters);
   show(displayWinner);
   newGame.checkForWinner(event.target.id, newGame.computerPlayer.choice);
 }
