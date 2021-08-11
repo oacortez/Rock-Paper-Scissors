@@ -1,8 +1,8 @@
 
-# Title
-Rock, Paper, Scissors 
+# Rock, Paper, Scissors 
 
 ## Table of Contents
+  - [Project Specs](#project-specs)
   - [Abstract](#abstract)
   - [Technologies](#technologies)
   - [Illustrations](#illustrations)
@@ -10,7 +10,11 @@ Rock, Paper, Scissors
   - [Contributors](#contributors)
 	- [Wins](#wins)
 	- [Challenges + Improvements](#challenges-+-Improvements)
-  - [Project Specs](#project-specs)
+
+
+## Project Specs
+  - To view playable game click [here]()
+  - rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo.html)
 
 ## Abstract
 This project is a user friendly game that is called Rock, Paper, Scissors. This game is based of a well know game all over the world.
@@ -54,7 +58,3 @@ View the project in the browser by running open index.html in your terminal
 - there was hardly no bugs but my naming conventions were very poorly named
 - for future iterations I would like to work on better understanding in local storage and as well event targeting
 - I would also like to improve better knowledge for naming conventions
-
-## Project Specs
-  - To view playable game click [here]()
-  - rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo.html)
