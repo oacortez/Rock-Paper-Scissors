@@ -35,19 +35,26 @@ the game and the game score would go back to zero on both ends.
 
 
 ## Install + Setup
-	- Install instructions, how to access the website and how to use the website
+Install instructions :
+
+Fork this repo
+Clone the repo to your local machine
+View the project in the browser by running open index.html in your terminal
 
 ## Contributors
-  - [Hayley Dixon](https://github.com/hheyhhay)
+  - [Oscar Cortez Barrientos](https://github.com/oacortez)
 
 ## Wins
-	- What went well!
-	- Successes
+- I try my best to be as Proffesional and try my best to create appropriate branches and as well commit frequently 
+- I really liked the style for my comp of the project 
+- I think I did very good on having semantic html did not have a lot of divs and spans
 
 ## Challenges + Improvements
-	- What was difficult & how you would like to improve on code/project
-	- Any Bugs
-	- Future Iterations
+- Local storage and event targeting was very diffuclt for me to grasp on and needed a lot of assistance 
+- there was hardly no bugs but my naming conventions were very poorly named
+- for future iterations I would like to work on better understanding in local storage and as well event targeting
+- I would also like to improve better knowledge for naming conventions
 
 ## Project Specs
-  - The project spec & rubric can be found [here](insert project spec sheet here)
+  - To view playable game click [here]()
+  - rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo.html)
