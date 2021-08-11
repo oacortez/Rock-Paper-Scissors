@@ -44,9 +44,9 @@ class Game {
     this.computerPlayer.saveWinsToStorage();
     render(this);
     if(this.gameType === 'classic') {
-      setTimeout(viewClassic, 2000)
+      setTimeout(viewClassic, 3000)
     } else {
-      setTimeout(viewDifficult, 2000)
+      setTimeout(viewDifficult, 3000)
     }
   }
 }
