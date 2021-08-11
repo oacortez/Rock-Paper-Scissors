@@ -57,7 +57,6 @@ function updatedWins() {
     winTag.innerText = `Wins: ${humanWins}`
   }
   if(localStorage.Computer) {
-    console.log("hi");
     var hackerWins = localStorage.Computer
     computerWins.innerText = `Wins: ${hackerWins}`
   }
@@ -139,7 +138,6 @@ function difficultFighters(e) {
 function computerChoice(numberOfFighters) {
   var opponentChoice = Object.keys(newGame.fighters);
   newGame.computerPlayer.choice = opponentChoice[randomGenerator(numberOfFighters)];
-  console.log(newGame.computerPlayer.choice);
 }
 
 
