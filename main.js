@@ -1,6 +1,3 @@
-
-// Fighters 🤦🏻‍♂️🔫
-
 ///////  ⬇️ Query Selectors
 var classicBtn = document.querySelector('#classicBtn');
 var difficultBtn = document.querySelector('#difficultBtn');
@@ -21,8 +18,8 @@ var playerFighterImg = document.querySelector('#playerFighterImg');
 var computerFighterImg = document.querySelector('#computerFighterImg');
 var winTag = document.querySelector('#winTag');
 var computerWins = document.querySelector('#computerWins');
-
 var newGame;
+
 
 ////// ⬇️ Event Listeners
 classicBtn.addEventListener('click', viewClassic);
@@ -35,24 +32,12 @@ window.addEventListener('load', updatedWins);
 
 
 ///// ⬇️ functions
-
 function randomGenerator(numberOfFighters) {
   return Math.floor(Math.random() * numberOfFighters);
 }
 
-// function leftSection() {
-//   if(!newGame) {
-//     return;
-//   }
-//   var wins = newGame.humanPlayer.retrieveWinsFromStorage();
-//   playerSection.innerHTML = `
-//   <p>Player: Human</p>
-//   <p>Wins: ${wins}</p>
-//  `;
-// }
 
 function viewClassic() {
-  // event.preventDefault();
   newGame = new Game('classic');
   newGame.humanPlayer.retrieveWinsFromStorage();
   newGame.computerPlayer.retrieveWinsFromStorage();
@@ -62,10 +47,9 @@ function viewClassic() {
   hide(displayWinner);
   show(changeGameBtn);
   updatedWins();
-  // winTag.innerText = `Wins: ${newGame.humanPlayer.wins}`;
-  // computerWins.innerText = `Wins: ${newGame.computerPlayer.wins}`;
   header.innerText = 'Choose your fighter!';
 }
+
 
 function updatedWins() {
   if(localStorage.Human) {
@@ -73,11 +57,11 @@ function updatedWins() {
     winTag.innerText = `Wins: ${humanWins}`
   }
   if(localStorage.Computer) {
-    console.log("hi");
     var hackerWins = localStorage.Computer
     computerWins.innerText = `Wins: ${hackerWins}`
   }
 }
+
 
 function changeGame() {
   hide(viewYourClassic);
@@ -87,6 +71,7 @@ function changeGame() {
   hide(showDifficultFighters);
 }
 
+
 function resetGame() {
   var verifyChoice = window.confirm('Are you sure?')
   if (verifyChoice === true) {
@@ -94,6 +79,7 @@ function resetGame() {
     location.reload();
   }
 }
+
 
 function viewDifficult() {
   newGame = new Game('difficult');
@@ -108,13 +94,16 @@ function viewDifficult() {
   header.innerText = 'Choose your fighter!';
 }
 
+
 function hide(element) {
   element.classList.add("hidden");
 }
 
+
 function show(element) {
   element.classList.remove("hidden");
 }
+
 
 function classicFighters(e) {
   if(event.target.id === 'classicFighters') {
@@ -128,6 +117,7 @@ function classicFighters(e) {
   show(displayWinner);
   newGame.checkForWinner(event.target.id, newGame.computerPlayer.choice);
 }
+
 
 function difficultFighters(e) {
   if(event.target.id === 'showDifficultFighters') {
@@ -144,17 +134,18 @@ function difficultFighters(e) {
   newGame.checkForWinner(event.target.id, newGame.computerPlayer.choice);
 }
 
+
 function computerChoice(numberOfFighters) {
   var opponentChoice = Object.keys(newGame.fighters);
   newGame.computerPlayer.choice = opponentChoice[randomGenerator(numberOfFighters)];
-  console.log(newGame.computerPlayer.choice);
 }
+
 
 function render(completedGame) {
   if(completedGame.winner === 'Human') {
-    header.innerText = 'You won 🥳';
+    header.innerText = 'You won! 🥳';
   } else if(completedGame.winner === 'Computer') {
-    header.innerText = 'Computer won 👾';
+    header.innerText = 'Computer won! 👾';
   } else {
     header.innerText = 'Its a tie!';
   }
