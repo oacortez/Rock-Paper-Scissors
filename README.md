@@ -42,8 +42,8 @@ the game and the game score would go back to zero on both ends.
 Install instructions :
 
 Fork this repo
-Clone the repo to your local machine
-View the project in the browser by running open index.html in your terminal
+- Copy and Clone the repo to your local machine
+- View the project in the browser by running open index.html in your terminal
 
 ## Contributors
   - [Oscar Cortez Barrientos](https://github.com/oacortez)
