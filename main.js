@@ -145,9 +145,9 @@ function computerChoice(numberOfFighters) {
 
 function render(completedGame) {
   if(completedGame.winner === 'Human') {
-    header.innerText = 'You won 🥳';
+    header.innerText = 'You won! 🥳';
   } else if(completedGame.winner === 'Computer') {
-    header.innerText = 'Computer won 👾';
+    header.innerText = 'Computer won! 👾';
   } else {
     header.innerText = 'Its a tie!';
   }
