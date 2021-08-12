@@ -13,7 +13,7 @@
 
 
 ## Project Specs
-  - To view playable game click [here]()
+  - To view playable game click [here](https://oacortez.github.io/Rock-Paper-Scissors/)
   - rubric can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo.html)
 
 ## Abstract
